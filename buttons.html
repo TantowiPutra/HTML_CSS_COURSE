@@ -3,11 +3,16 @@
         background-color: rgb(200, 0, 0);
         color: white;
         border: none;
-        height: 36px;
-        width: 105px;
         border-radius: 2px;
         cursor: pointer;
         margin-right: 8px;
+        margin-left: 20px;
+
+        /* Using padding is a better alternative than using height and width */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
 
         /* Set the default transition duration for subscribe button by 1s */
         transition: opacity 0.15s;
@@ -29,8 +34,17 @@
         border-style: solid;
         border-width: 1px;
         color: rgb(41, 118, 211);
-        height: 36px;
-        width: 60px;
+
+        /* Fixed value is not efficient to implement */
+        /* height: 36px;
+        width: 60px; */
+
+        /* 
+            CSS Box Model 
+            Conists of: Margin and Padding
+        */
+        padding-left: 30px;
+        padding-top: 20px;
         cursor: pointer;
         margin-right: 8px;
         transition:
@@ -72,5 +86,5 @@
 </style>
 
 <button class="subscribe-button">SUBSCRIBE</button>
-<button class="join-button">JOIN</button>
+<button class="join-button">JOIN MY CHANNEL</button>
 <button class="tweet-button">Tweet</button>
