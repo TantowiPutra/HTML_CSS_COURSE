@@ -15,7 +15,7 @@
 
         .thumbnail {
             /* When we change an image width, the height also adjust */
-            width: 300px;
+            width: 100%;
 
             /* Needed when we have fixed size so the image will fit only to the width and height already set */
             object-fit: contain;
@@ -23,7 +23,6 @@
             /* border-width: 2px;
             border-style: solid;
             border-color: red; */
-            display: block;
         }
 
         .thumbnail-row {
@@ -51,15 +50,15 @@
         }
 
         .video-preview {
-            width: 300px;
-            display: inline-block;
             vertical-align: top;
-            margin-right: 15px;
+        }
+
+        .video-info-grid {
+            display: grid;
+            grid-template-columns: 50px 1fr;
         }
 
         .channel-picture {
-            display: inline-block;
-            width: 50px;
             vertical-align: top;
         }
 
@@ -68,13 +67,8 @@
             border-radius: 50%;
         }
 
-        .video-info {
-            display: inline-block;
-            width: 200px;
-        }
-
         .video-stats,
-        .video-author{
+        .video-author {
             font-size: 12px;
             color: rgb(96, 96, 96);
         }
@@ -83,64 +77,174 @@
             margin-bottom: 4px;
         }
 
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 16px;
+            row-gap: 40px;
+        }
     </style>
 </head>
 
 <body>
     <input class="search-bar" type="text" placeholder="Search">
 
-    <div class="video-preview">
-        <div class="thumbnail-row">
-            <img class="thumbnail" src="thumbnail-images/thumbnail-1.webp">
-        </div>
-        <div>
-            <div class="channel-picture">
-
-                <!-- Image by default overflow -->
-                <img class="profile-picture" src="thumbnail-images/channel-1.jpeg" alt="">
+    <div class="video-grid">
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnail-images/thumbnail-1.webp">
             </div>
-            <div class="video-info">
-                <p class="video-title">
-                    Talking Tech and AI with Google CEO Sundar Pichai!
-                </p>
+            <div class="video-info-grid">
+                <div class="channel-picture">
 
-                <p class="video-author">
-                    Marques Brownlee
-                </p>
+                    <!-- Image by default overflow -->
+                    <img class="profile-picture" src="thumbnail-images/channel-1.jpeg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">
+                        Talking Tech and AI with Google CEO Sundar Pichai!
+                    </p>
 
-                <p class="video-stats">
-                    3.4M views &#183; 6 months ago
-                </p>
-            </div>
-        </div>
+                    <p class="video-author">
+                        Marques Brownlee
+                    </p>
 
-    </div>
-
-    <div class="video-preview">
-        <div class="thumbnail-row">
-            <img class="thumbnail" src="thumbnail-images/thumbnail-2.webp">
-        </div>
-        <div>
-            <div class="channel-picture">
-
-                <!-- Image by default overflow -->
-                <img class="profile-picture" src="thumbnail-images/channel-2.jpeg" alt="">
-            </div>
-            <div class="video-info">
-                <p class="video-title">
-                    Talking Tech and AI with Google CEO Sundar Pichai!
-                </p>
-
-                <p class="video-author">
-                    Markiplier
-                </p>
-
-                <p class="video-stats">
-                    19M views &#183; 14 years ago
-                </p>
+                    <p class="video-stats">
+                        3.4M views &#183; 6 months ago
+                    </p>
+                </div>
             </div>
         </div>
 
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnail-images/thumbnail-2.webp">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+
+                    <!-- Image by default overflow -->
+                    <img class="profile-picture" src="thumbnail-images/channel-2.jpeg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">
+                        Talking Tech and AI with Google CEO Sundar Pichai!
+                    </p>
+
+                    <p class="video-author">
+                        Markiplier
+                    </p>
+
+                    <p class="video-stats">
+                        19M views &#183; 14 years ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnail-images/thumbnail-1.webp">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+
+                    <!-- Image by default overflow -->
+                    <img class="profile-picture" src="thumbnail-images/channel-1.jpeg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">
+                        Talking Tech and AI with Google CEO Sundar Pichai!
+                    </p>
+
+                    <p class="video-author">
+                        Marques Brownlee
+                    </p>
+
+                    <p class="video-stats">
+                        3.4M views &#183; 6 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnail-images/thumbnail-2.webp">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+
+                    <!-- Image by default overflow -->
+                    <img class="profile-picture" src="thumbnail-images/channel-2.jpeg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">
+                        Talking Tech and AI with Google CEO Sundar Pichai!
+                    </p>
+
+                    <p class="video-author">
+                        Markiplier
+                    </p>
+
+                    <p class="video-stats">
+                        19M views &#183; 14 years ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnail-images/thumbnail-1.webp">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+
+                    <!-- Image by default overflow -->
+                    <img class="profile-picture" src="thumbnail-images/channel-1.jpeg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">
+                        Talking Tech and AI with Google CEO Sundar Pichai!
+                    </p>
+
+                    <p class="video-author">
+                        Marques Brownlee
+                    </p>
+
+                    <p class="video-stats">
+                        3.4M views &#183; 6 months ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnail-images/thumbnail-2.webp">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+
+                    <!-- Image by default overflow -->
+                    <img class="profile-picture" src="thumbnail-images/channel-2.jpeg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">
+                        Talking Tech and AI with Google CEO Sundar Pichai!
+                    </p>
+
+                    <p class="video-author">
+                        Markiplier
+                    </p>
+
+                    <p class="video-stats">
+                        19M views &#183; 14 years ago
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
