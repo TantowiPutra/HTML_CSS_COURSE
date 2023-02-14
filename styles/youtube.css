@@ -4,7 +4,7 @@ p {
     margin-bottom: 0;
 }
 
-body{
+body {
     margin: 0;
 }
 
@@ -34,10 +34,10 @@ body{
     line-height: 20px;
 }
 
-.search-bar {
-    font-size: 20px;
-    margin-left: 12px;
-    display: block;
+.search-bar::placeholder {
+    font-family: Roboto, Arial;
+    font-size: 16px;
+    padding-left: 10px;
 }
 
 .div-example {
@@ -87,20 +87,110 @@ body{
     justify-content: space-between;
 }
 
-.left-section{
-    background-color: lightblue;
-    width: 150px;
+.left-section {
+    display: flex;
+    align-items: center;
 }
 
-.middle-section{
-    background-color: lightpink;
+.middle-section {
+    display: flex;
+    align-items: center;
     margin-left: 70px;
     margin-right: 35px;
     flex: 1;
     max-width: 500px;
 }
 
-.right-section{
-    background-color: lightblue;
-    width: 200px;
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Prevent items from shrinking */
+    flex-shrink: 0;
+
+    width: 180px;
+    margin-right: 20px;
+}
+
+.hamburger-menu {
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 20px;
+}
+
+.youtube-logo {
+    height: 24px;
+}
+
+.search-bar {
+    flex: 1;
+    font-size: 16px;
+    padding-left: 10px;
+    height: 36px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+
+    /* Setting width to 0 so it shrinks to as much as possible */
+    width: 0;
+
+    /* Inset is used so the shadow is in the inside of a div */
+    /* 1px : horizontal position of shadow */
+    /* 2px : vertical position of shadow */
+    /* 3px : blur radius */
+    /* rgba: box-shadow colour */
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-button {
+    height: 39px;
+    width: 66px;
+    background-color: rgb(240, 240, 240);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    margin-left: -1px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-voice-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border-color: rgb(192, 192, 192);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon {
+    height: 25px;
+}
+
+.search-voice-icon{
+    height: 24px;
+}
+
+.upload-icon{
+    height: 24px;
+}
+
+.youtube-apps-icon{
+    height: 24px;
+}
+
+.notifications-icon{
+    height: 24px;
+}
+
+.current-user-picture{
+    height: 32px;
+    border-radius: 50%;
 }
