@@ -1,0 +1,96 @@
+.subscribe-button {
+    background-color: rgb(200, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-left: 20px;
+    vertical-align: top;
+
+    /* Using padding is a better alternative than using height and width */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    /* Set the default transition duration for subscribe button by 1s */
+    transition: opacity 0.15s;
+}
+
+.subscribe-button:hover {
+    opacity: 0.8;
+}
+
+/* Pseudo Element when an element is being clicked or otherwise activated */
+/* In the example below, the buttton will have an opacity of 0.5 when clicked */
+.subscribe-button:active {
+    opacity: 0.5;
+}
+
+.join-button {
+    background-color: white;
+    border-color: rgb(41, 118, 211);
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(41, 118, 211);
+    vertical-align: top;
+
+    /* Fixed value is not efficient to implement */
+    /* height: 36px;
+    width: 60px; */
+
+    /* 
+        CSS Box Model 
+        Conists of: Margin and Padding
+    */
+
+    /* Reduced padding by 1 px to compensate for border, which is 1px in width */
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition:
+        background-color 0.15s,
+        color 0.15s;
+}
+
+.join-button:hover {
+    background-color: rgb(41, 118, 211);
+    color: white;
+}
+
+.join-button:active {
+    opacity: 0.7;
+}
+
+.tweet-button {
+    background-color: rgb(2, 158, 255);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 74px;
+    vertical-align: top;
+
+    /* Set border-radius to half of the height to get rounded corners */
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition:
+        box-shadow 0.15s,
+        height 0.15s,
+        width 0.15s;
+}
+
+.tweet-button:hover {
+    /* First value indicates the horizontal position of the shadow */
+    /* First value indicates the vertical position of the shadow */
+    /* Third indicates blur value */
+    /* We can also user rgba to custom shadow color so it is more realistic */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+    height: 72px;
+    width: 148px;
+}
